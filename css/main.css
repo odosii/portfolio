@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@1,200;1,300&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#menu-toggle{
+  display: none;
+}
+
+h1{
+  color: green;
+  margin: 20px;
+  padding: 20px;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+z-index: 1;
+}
+
+ul.menubox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 30px;
+  z-index: 1;
+}
+
+header {
+   display: flex; 
+   justify-content: space-between; 
+   align-items: center; 
+   background-color: yellow;
+   font-size: 25px;
+   font-family: "Nunito", cursive;
+   max-width: 100%;
+   z-index: 1;
+
+}
+
+.menubox {
+  display: flex;
+  justify-content: flex-end; 
+  list-style: none; 
+  margin: 20px;
+  padding: 0;
+}
+
+.menubox li {
+  margin-left: 20px; 
+}
+
+
+
+.menubox li a {
+  text-decoration: none; 
+  color: green; 
+  font-weight: bold; 
+}
+
+
+
+header {
+  background-image: url('img.avif');
+  background-size: cover;
+  background-position: center center;
+  height: 500px;  
+}
+
+.frame_blc {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; 
+}
+
+.frame_blc iframe {
+  position: absolute;
+  width: 100%;
+  height: 625px;
+  left: 0;
+  top: 0;
+}
+
+
+.price-block {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.price-item {
+  text-align: center;
+  background-color: green;
+  padding: 40px;
+  margin: 20px;
+  width: calc(33.33% - 40px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.price-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.price-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: "Nunito", cursive;
+  color: white;
+}
+
+.price-value {
+  font-size: 25px;
+  color: yellow;
+}
+
+.price-features li{
+  color: white;
+}
+.price-button{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.contact-section {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: "Nunito", cursive;
+}
+
+h2 {
+  text-align: center;
+  color: green;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: green;
+  color: yellow;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: black;
+}
+
+
+
+/*video*/
+
+.video-container {
+ min-height: 500px;
+ position: relative;
+ padding: 0;
+ color: #fff;
+}
+
+video {
+ width: 100%;
+ height: 100%;
+ top: 0;
+ object-fit: cover;
+ position: absolute;
+ z-index: -2;
+}
+
+.video-container h2 {
+ padding-top: 80px;
+}
+
+.video-container p {
+ padding: 0 40px; 
+}
+
+.black-sqr {
+ position: absolute;
+ width: 100%;
+ height: 100%;
+ top: 0;
+ background-color: rgba(0, 0, 0, 0.47);
+ z-index: -1;
+}
+
+
+
+@media screen and (max-width: 760px) {
+header{
+  font-size: 15px;
+}
+
+.frame_blc iframe{
+  display: none;
+}
+
+.menu-btn{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right:0;
+  width: 26px;
+  height: 26px;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.menu-btn > span,
+.menu-btn > span::before,
+.menu-btn > span::after {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: green;
+  transition-duration: .25s;
+}
+.menu-btn > span::before {
+  content: '';
+  top: -8px;
+}
+.menu-btn > span::after {
+  content: '';
+  top: 8px;
+}
+
+.menubox{
+  display: block;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: -100%;
+  width: 300px;
+  height: 100%;
+  margin: 0;
+  padding: 80px 0;
+  list-style: none;
+  background-color: green;
+  box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+  transition-duration: .25s;
+}
+
+.menu-item {
+  display: block;
+  padding: 12px 24px;
+  color: #333;
+  font-family: 'Nunito', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  transition-duration: .25s;
+}
+.menu-item:hover {
+  background-color: white;
+}
+
+.menubox li a {
+  color: yellow;
+}
+
+#menu-toggle{
+  opacity: 0;
+}
+
+#menu-toggle:checked ~ .menu-btn > span{
+  transform: rotate(45deg);
+}
+#menu-toggle:checked ~ .menu-btn > span::before{
+  top: 0;
+  transform: rotate(0);
+}
+#menu-toggle:checked ~ .menu-btn > span::after{
+  top: 0;
+  transform: rotate(90deg);
+}
+#menu-toggle:checked ~ .menubox{
+  visibility: visible;
+  left: 0;
+}
+}
